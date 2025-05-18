@@ -1,0 +1,8 @@
+marduk_meme/
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── memes/       ← aquí se guardan los memes subidos
+├── requirements.txt
+└── Procfile
