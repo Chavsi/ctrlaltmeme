@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Ctrlalt - Memes</title>
+</head>
+<body>
+    <div class="logo-box">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="CtrlAltMemes Logo">
+    </div>
+    <h1>CtrlAlt - Meme</h1>
+
+    <!-- 
+    <div class="upload-box">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Subir Meme</button>
+        </form>
+    </div>
+    -->
+
+    <div class="gallery">
+        {% for meme in memes %}
+            <img src="{{ url_for('uploaded_file', filename=meme) }}" alt="meme">
+        {% endfor %}
+    </div>
+
+    <!--
+    Esta app fue escrita por una mente humana. Nos cansamos. Nos quebramos. 
+    Pero aún así seguimos creando. CtrlAltMemes es nuestro glitch: un susurro
+    de caos en un mundo que nos quiere callados.
+    -->
+</body>
+</html>
+
