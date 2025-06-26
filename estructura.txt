@@ -1,8 +1,13 @@
-marduk_meme/
-├── app.py
-├── templates/
-│   └── index.html
+ctrlaltmeme/
 ├── static/
 │   └── memes/       ← aquí se guardan los memes subidos
+├── templates/
+│   └── index.html
+├── .gitignore
+├── app.py
+├── estructura.txt
 ├── requirements.txt
-└── Procfile
+├── Procfile
+├── README.md
+├── requirements.txt
+└── run.py
