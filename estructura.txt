@@ -1,13 +1,24 @@
 ctrlaltmeme/
-├── static/
-│   └── memes/       ← aquí se guardan los memes subidos
-├── templates/
-│   └── index.html
-├── .gitignore
-├── app.py
-├── estructura.txt
-├── requirements.txt
-├── Procfile
-├── README.md
-├── requirements.txt
-└── run.py
+├── app/                        ← Módulo principal de la app Flask
+│   ├── __init__.py             ← Fábrica de la app (create_app)
+│   ├── config.py               ← Configuraciones futuras (dev/prod)
+│   ├── forms.py                ← Formularios (placeholder)
+│   ├── models.py               ← Modelos de datos (placeholder)
+│   ├── blueprints/             ← Rutas modulares (a futuro)
+│   ├── static/                 ← Archivos estáticos de la app
+│   │   ├── memes/              ← Aquí se guardan los memes subidos
+│   │   │   ├── 1.png
+│   │   │   └── 2.png
+│   │   ├── favicon.ico
+│   │   ├── logo.png
+│   │   └── style.css
+│   └── templates/              ← Plantillas HTML de Jinja2
+│       └── index.html
+├── migrations/                 ← (vacío o usado si integras Flask-Migrate)
+├── tests/                      ← Tests automáticos (a futuro)
+├── run.py                      ← Para desarrollo local (`python run.py`)
+├── wsgi.py                     ← Para producción (usado por Gunicorn)
+├── Procfile                    ← Define cómo correr en Railway
+├── requirements.txt            ← Dependencias
+├── .gitignore                  ← Archivos a ignorar por Git
+└── README.md                   ← Documentación del proyecto

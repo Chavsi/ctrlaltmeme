@@ -2,12 +2,13 @@ from flask import Flask, render_template, send_from_directory
 import os
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = 'static/memes'
+#UPLOAD_FOLDER = 'static/memes'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 def create_app():
-    app = Flask(__name__)
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    app = Flask(__name__, static_folder='static', template_folder='templates')
+    
+    app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static', 'memes')
 
     @app.after_request
     def add_security_headers(response):
@@ -43,6 +44,4 @@ def create_app():
         return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
     return app
-
-application = create_app()
 
