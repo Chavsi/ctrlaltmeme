@@ -1,6 +1,6 @@
 # Ctrl+Alt+Memes 🧠📸
 
-Una app mínima en Flask para subir y mostrar memes sin login, sin cuentas y sin censura.
+Una app mínima en Flask para subir y mostrar memes sin login, sin cuentas.
 
 ---
 
